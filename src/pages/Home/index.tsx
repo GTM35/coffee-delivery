@@ -1,3 +1,11 @@
+import { Header } from "../../Components/Header";
+import { Intro } from "../../Components/Intro";
+
 export function Home() {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Header />
+      <Intro />
+    </>
+  );
 }
