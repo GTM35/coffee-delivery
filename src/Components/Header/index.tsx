@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import {
   Aside,
   ContainerActions,
@@ -9,7 +10,9 @@ import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 export function Header() {
   return (
     <HeaderContainer>
-      <img src="./Logo.svg" alt="" />
+      <HashLink to="/">
+        <img src="./Logo.svg" alt="" />
+      </HashLink>
 
       <Aside>
         <ContainerActions>
@@ -17,7 +20,9 @@ export function Header() {
           <span>Porto Alegre, RS</span>
         </ContainerActions>
         <ContainerCart>
-          <ShoppingCart fontSize={22} weight="fill" />
+          <HashLink to="/checkout">
+            <ShoppingCart fontSize={22} weight="fill" />
+          </HashLink>
         </ContainerCart>
       </Aside>
     </HeaderContainer>
